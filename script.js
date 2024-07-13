@@ -57,7 +57,7 @@ function callingTextMagnificationAnimation() {
         if (progress < 1) {
             requestAnimationFrame(textMagnificationAnimation);
         } else {
-            setTimeout(callingShiftingTextToRightAndImageRotationAnimaions(false), 300);
+            setTimeout(() => callingShiftingTextToRightAndImageRotationAnimaions(false), 150);
         }
     }
 
