@@ -1,0 +1,32 @@
+.banner {
+    width: 320px;
+    height: 427px;
+    margin: auto;
+    overflow: hidden;
+    font-family: 'Poppins';
+    text-align: center;
+    background-color: rgba(255, 238, 193, 1);
+    position: relative;
+
+    .appeal {
+        font-size: 20.53px;
+        font-weight: 600;
+        line-height: 21.08px;
+        position: absolute;
+        top: -22.02px;
+        left: 119.65px;
+        transform: scale(0.5);
+    }
+
+    .call-action {
+        font-size: 27.92px;
+        font-weight: 800;
+        line-height: 28.68px;
+        position: absolute;
+        top: 77.12px;
+        left: -203.02px;
+        z-index: 10;
+    }
+
+    @import 'banner-images';
+}
