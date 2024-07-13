@@ -33,6 +33,7 @@ function callingloweringDownTextAnimation() {
         if (progress <= 1) {
             requestAnimationFrame(loweringDownTextAnimation);
         } else {
+            text1.style.top = '51.02px';
             callingTextMagnificationAnimation();
         }
     }
@@ -54,9 +55,10 @@ function callingTextMagnificationAnimation() {
 
         text1.style.transform = `scale(${0.5 + transform})`;
         
-        if (progress < 1) {
+        if (progress <= 1) {
             requestAnimationFrame(textMagnificationAnimation);
         } else {
+            text1.style.transform = `scale(1)`;
             setTimeout(() => callingShiftingTextToRightAndImageRotationAnimaions(false), 150);
         }
     }
@@ -79,7 +81,14 @@ function callingShiftingTextToRightAndImageRotationAnimaions(isBack) {
         if (progress <= 1) {
             requestAnimationFrame(shiftingTextToRightAndImageRotationAnimaions);
         } else if (!isBack) {
+            text2.style.left = '59.02px';
             setTimeout(() => callingShiftingTextToRightAndImageRotationAnimaions(true), 50);
+        } else {
+            organicShapesImg.style.transform = `rotate(114.98deg)`;
+            mathsBoardImg.style.transform = `rotate(-12.76deg)`;
+            schoolElementsImg.style.transform = `rotate(6.43deg)`;
+            stationeryImg.style.transform = `rotate(0deg)`;
+
         }
     }
 
