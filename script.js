@@ -66,6 +66,11 @@ function callingTextMagnificationAnimation() {
     requestAnimationFrame(textMagnificationAnimation);
 }
 
+const organicShapesImg = banner.querySelector('.organic-shapes-img');
+const mathsBoardImg = banner.querySelector('.maths-board-img');
+const schoolElementsImg = banner.querySelector('.school-elements-img');
+const stationeryImg = banner.querySelector('.stationery-img');
+
 function callingShiftingTextToRightAndImageRotationAnimaions(isBack) {
     let startAnimation = null;
     const endAnimation = 700;
@@ -88,7 +93,6 @@ function callingShiftingTextToRightAndImageRotationAnimaions(isBack) {
             mathsBoardImg.style.transform = `rotate(-12.76deg)`;
             schoolElementsImg.style.transform = `rotate(6.43deg)`;
             stationeryImg.style.transform = `rotate(0deg)`;
-
         }
     }
 
@@ -101,11 +105,6 @@ function shiftingTextToRightAnimaion(progress) {
     const translate = easeInOut(progress) * distanceText;
     text2.style.left = (-223.02 + translate) + 'px';
 }
-
-const organicShapesImg = banner.querySelector('.organic-shapes-img');
-const mathsBoardImg = banner.querySelector('.maths-board-img');
-const schoolElementsImg = banner.querySelector('.school-elements-img');
-const stationeryImg = banner.querySelector('.stationery-img');
 
 function imageRotationAnimaion(progress, isBack = false) {
     if (!isBack) {
